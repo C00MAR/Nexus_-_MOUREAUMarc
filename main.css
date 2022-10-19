@@ -19,6 +19,7 @@ body {
 header {
   position: relative;
   overflow: hidden;
+  align-items: center;
   width: 100vw;
   height: 100vh;
 }
@@ -317,7 +318,7 @@ header .close {
 .two {
   height: 100vh;
   width: 100%;
-  align-content: center;
+  margin-top: 150px;
 }
 .two .gridphoto {
   width: 80%;
@@ -336,6 +337,7 @@ header .close {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
+  mix-blend-mode: luminosity;
 }
 .two .gridphoto #un {
   grid-column: 1/3;
@@ -402,6 +404,81 @@ header .close {
   .two .gridphoto #seize {
     grid-row: 3/5;
     grid-column: 1/3;
+  }
+}
+
+.faq {
+  margin-top: 100px;
+  position: relative;
+  left: 15%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 15px;
+  width: 70%;
+}
+.faq .titlefaq {
+  font-size: 15em;
+  letter-spacing: 100px;
+  margin-left: 80px;
+}
+
+.ask {
+  margin-top: -10%;
+  width: 70%;
+  left: 15%;
+  position: relative;
+  height: 120vh;
+}
+.ask .listask {
+  margin-top: 50px;
+  width: 80%;
+  position: relative;
+  left: 20%;
+}
+.ask .listask .questlist {
+  list-style: none;
+}
+.ask .listask .questlist .askitems {
+  font-size: 3.3em;
+  letter-spacing: 3px;
+}
+.ask .listask .questlist .repitems {
+  margin-left: 20px;
+  font-size: 2em;
+  letter-spacing: 1px;
+  color: #cacaca;
+}
+.ask .listask .questlist .sep {
+  border-bottom: 2px solid white;
+  margin: 40px 0px;
+  position: relative;
+  width: 120%;
+  right: 20%;
+}
+@media only screen and (max-width: 500px) {
+  .ask {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    left: 0;
+  }
+  .ask .listask {
+    width: 95%;
+    left: 5%;
+    position: relative;
+  }
+  .ask .listask .questlist .askitems {
+    font-size: 2.3em;
+  }
+  .ask .listask .questlist .repitems {
+    margin-top: 5px;
+    font-size: 1.5em;
+  }
+  .ask .listask .questlist .sep {
+    margin: 20px 0px;
+    width: 80%;
+    left: 0;
   }
 }
 

@@ -21,6 +21,7 @@ body{
 header{
     position: relative;
     overflow: hidden;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     .bg-vid{
@@ -315,7 +316,7 @@ header{
 .two{
     height: 100vh;
     width: 100%;
-    align-content: center;
+    margin-top: 150px;
     .gridphoto{
         width: 80%;
         display: grid;
@@ -332,6 +333,7 @@ header{
             height: 100%;
             object-fit: cover;
             border-radius: 10px;
+            mix-blend-mode: luminosity;
         }
         #un{
             grid-column: 1 / 3;
@@ -403,3 +405,77 @@ header{
     }
 }
 
+.faq{
+    margin-top: 100px;
+    position: relative;
+    left: 15%;
+    display: flex;  
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 15px;
+    width: 70%;
+    .titlefaq{
+        font-size: 15em;
+        letter-spacing: 100px;
+        margin-left: 80px;
+    }
+}
+
+.ask{
+    margin-top: -10%;
+    width: 70%;
+    left: 15%;
+    position: relative;
+    height: 120vh;
+    .listask{
+        margin-top: 50px;
+        width: 80%;
+        position: relative;
+        left: 20%;
+        .questlist{
+            list-style: none;
+            .askitems{
+                font-size: 3.3em;
+                letter-spacing: 3px;
+            }
+            .repitems{
+                margin-left: 20px;
+                font-size: 2em;
+                letter-spacing: 1px;
+                color: #cacaca;
+            }
+            .sep{
+                border-bottom: 2px solid white;
+                margin: 40px 0px;
+                position: relative;
+                width: 120%;
+                right: 20%;
+            }
+        }
+    }
+    @media only screen and (max-width: 500px){
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        left: 0;
+        .listask{
+            width: 95%;
+            left: 5%;
+            position: relative;
+            .questlist{
+                .askitems{
+                    font-size: 2.3em;
+                }
+                .repitems{
+                    margin-top: 5px;
+                    font-size: 1.5em;
+                }
+                .sep{
+                    margin: 20px 0px;
+                    width: 80%;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
