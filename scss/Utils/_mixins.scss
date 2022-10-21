@@ -1,3 +1,8 @@
+@use '../Utils/variables' as *;
+/// Responsive breakpoint manager
+/// @access public
+/// @param {String} $breakpoint - Breakpoint
+/// @requires $breakpoints
 @mixin respond-to($breakpoint) {
     $raw-query: map-get($breakpoints, $breakpoint);
 
@@ -7,12 +12,27 @@
             unquote($raw-query),
             inspect($raw-query)
         );
-        @media #{$query} {
-            @content;
-        }
 
+    @media #{$query} {
+        @content;
+    }
     } @else {
         @error 'No value found for `#{$breakpoint}`. '
-            + 'Please make sure it is defined in `$breakpoints` map.';
+        + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
+
+@mixin display($type:'flex', $justify:'center', $align:'center', $direction:'column', $row:'0', $column:'0', $rowgap:0px, $columngap:0px){
+    display: $type;
+    @if ($type == 'flex'){
+        justify-content: $justify;
+        align-items: $align;
+        flex-direction: $direction;
+    }
+    @else {
+        grid-template-rows: $row;
+        grid-template-columns: $column;
+        row-gap: $rowgap;
+        column-gap: $columngap;
     }
 }

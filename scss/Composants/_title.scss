@@ -5,8 +5,7 @@
     margin-top: 20vh;
     position: relative;
     left: 15%;
-    display: flex;  
-    justify-content: center;
+    @include display($type:flex, $justify:center);
     text-align: center;
     padding-bottom: 15px;
     width: 70%;
@@ -14,7 +13,7 @@
         font-size: 15em;
         letter-spacing: 5vw;
     }
-    @media only screen and (max-width: 500px){
+    @include respond-to('medium') {
         .titlepage{
             font-size: 12em;
             letter-spacing: 3vw;

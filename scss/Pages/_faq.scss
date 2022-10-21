@@ -16,7 +16,7 @@
     color: $font-secondary;
     width: 75%;
 }
-@media only screen and (max-width: 500px){
+@include respond-to('medium') {
     .askitems{
         font-size: 2.2em;
         width: 100%;

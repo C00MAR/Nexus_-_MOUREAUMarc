@@ -6,12 +6,8 @@
     height: 300vh;
     .event-grid{
         height: 300vh;
-        display: grid;
+        @include display($type:grid,$columngap:50px, $row:repeat(5, 100vh), $column:repeat(3, 1fr));
         position: relative;
-        column-gap: 50px;
-        grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: minmax(100vh, auto);
-        grid-template-rows: repeat(5, 100vh);
         .box-event{
             width: 90%;
             height: 70%;
@@ -44,14 +40,12 @@
         }
     }
 }
-@media only screen and (max-width: 500px){
+@include respond-to('medium') {
     .event{
         .event-grid{
             height: 300vh;
-            display: grid;
+            @include display($type:grid,$columngap:0px, $row:repeat(7, 100vh), $column:repeat(1, 1fr));
             position: relative;
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: repeat(7, 100vh);
         }
     }
 }

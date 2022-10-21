@@ -24,7 +24,7 @@
     }
 }
 
-@media only screen and (max-width: 500px){
+@include respond-to('medium') {
     .page{
         width: 85%;
         left: 0;
