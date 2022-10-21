@@ -1,0 +1,178 @@
+@use '../Utils/mixins' as *;
+@use '../Utils/variables' as *;
+
+.one{
+    height: 100vh;
+    width: 100%;
+    background-color: $bg-primary;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    .titlespaccing{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 25px;
+        @media only screen and (max-width: 500px){
+            margin-top: 0px;
+            flex-direction: column;
+        }
+        .title-one{
+            font-size: 15em;
+            margin-top: 25px;
+            letter-spacing: 30px;
+            animation: letterspacing 1.2s ease-in-out alternate infinite;
+            &:nth-child(2){
+                margin-left: 100px;        
+            }
+            @media only screen and (max-width: 500px){
+                font-size: 8.5em;
+                margin-top: -5px;
+                &:nth-child(2){
+                    margin-left: 0px;        
+                }
+            }
+            
+            @keyframes letterspacing {
+                to{
+                    letter-spacing: 20px;
+                }
+                from{
+                    letter-spacing: 15px;
+                }
+            }
+        }
+    }
+    .subtitle-one{
+        padding: 15px;
+        background-color: $bg-hover;
+        color: $font-sub;
+        font-size: 6em;
+        width: 90%;
+        letter-spacing: 5px;
+        margin-top: 10px;
+        @media only screen and (max-width: 500px){
+            font-size: 3em;
+            padding: 5px;
+        }
+    }
+    .detail-one{
+        letter-spacing: 3px;
+        font-size: 4em;
+        width: 50%;
+        margin-top: 15px;
+        @media only screen and (max-width: 500px){
+            font-size: 1.8em;
+            width: 70%;
+        }
+    }
+    .listdetail{
+        font-size: 2.2em;
+        margin-top: 6px;
+        @media only screen and (max-width: 500px){
+            font-size: 1.6em;
+            letter-spacing: 3px;
+        }
+    }
+    .finishdetail{
+        font-size: 9em;
+        letter-spacing: 10px;
+        margin-top: 80px;
+        @media only screen and (max-width: 500px){
+            font-size: 5em;
+        }
+    }
+}
+
+.two{
+    height: 100vh;
+    width: 100%;
+    margin-top: 150px;
+    .gridphoto{
+        width: 80%;
+        display: grid;
+        background-color: rgb(0, 0, 0);
+        left: 10%;
+        position: relative;
+        gap: 20px;
+        padding-bottom: 5vh;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: minmax(100vh, auto);
+        grid-template-rows: repeat(7, 40vh);
+        .photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            mix-blend-mode: luminosity;
+        }
+        #un{
+            grid-column: 1 / 3;
+        }
+        #deux{
+            grid-column: 3 / 5;
+            grid-row: 1 / 3;
+        }
+        #neuf{
+            grid-column: 4 / 6;
+            grid-row: 6 / 8;
+        }
+        #douze{
+            grid-row: 5 / 7;
+            grid-column: 2 / 4;
+        }
+        #quinze{
+            grid-column: 4 / 6;
+            grid-row: 4 / 6;
+        }
+        #treize{
+            grid-column: 1 / 3;
+        }
+        #seize{
+            grid-column: 1 / 4;
+            grid-row: 3 / 5;
+        }
+    }
+    @media only screen and (max-width: 500px){
+    .gridphoto{
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(100vh, auto);
+        grid-template-rows: repeat(12, 40vh);
+        width: 90%;
+        left: 5%;
+        padding-bottom: 25vh;
+        #un{
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+        #deux{
+            grid-row: 1 / 3;
+            grid-column: 1 ;
+        }
+        #cinq{
+            grid-column: 1 / 3;
+        }
+        #neuf{
+            grid-column: 1 / 2;
+            grid-row: 9 / 11;
+        }
+        #douze{
+            grid-column: 2 / 3;
+            grid-row: 9 / 11;
+        }
+        #quinze{
+            grid-column: 1 / 3;
+            grid-row: 12 / 13;
+        }
+        #treize{
+            grid-column: 2 / 3;
+            grid-row: 5 / 6;
+        }
+        #seize{
+            grid-row: 3/5;
+            grid-column: 1/3;
+        }
+        }
+    }
+}

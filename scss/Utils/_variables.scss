@@ -1,0 +1,10 @@
+$font-primary: #ffffff;
+$font-secondary: #cacaca;
+$font-sub: #000000;
+$bg-primary: #000000;
+$bg-hover: #ffffff;
+$breakpoints: (
+    'medium': (min-width: 500px),
+    'large': (min-width: 768px),
+    'huge': (min-width: 1024px),
+);

@@ -1,0 +1,50 @@
+@use '../Utils/mixins' as *;
+@use '../Utils/variables' as *;
+
+#contact{
+    margin-left: 125px;
+    @media only screen and (max-width: 500px){
+        margin-left: 15px;
+    }
+}
+.social{
+        
+    .social-link{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        text-decoration: none;
+        .social-icon{
+            fill: white;
+            height: 48px;
+            width: 48px;
+        }
+        .social-tag{
+            margin-left: 20px;
+            font-size: 2.2em;
+            letter-spacing: 2px;
+        }
+    }
+}
+@media only screen and (max-width: 500px){
+    .social{
+        .social-link{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            text-decoration: none;
+            .social-icon{
+                fill: white;
+                height: 48px;
+                width: 48px;
+            }
+            .social-tag{
+                margin-left: 20px;
+                font-size: 2.2em;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}

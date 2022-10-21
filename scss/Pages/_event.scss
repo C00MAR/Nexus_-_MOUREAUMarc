@@ -1,0 +1,57 @@
+@use '../Utils/mixins' as *;
+@use '../Utils/variables' as *;
+
+.event{
+    width: 100%;
+    height: 300vh;
+    .event-grid{
+        height: 300vh;
+        display: grid;
+        position: relative;
+        column-gap: 50px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(100vh, auto);
+        grid-template-rows: repeat(5, 100vh);
+        .box-event{
+            width: 90%;
+            height: 70%;
+            position: relative;
+            text-align: center;
+            left: 5%;
+            top: 5%;
+            .img-event{
+                width: 100%;
+                height: 80%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            .title-event{
+                font-size: 3.7em;
+                letter-spacing: 1px;
+            }
+            .detail-event{
+                font-size: 2em;
+                color: $font-secondary;
+            }
+            .date-event{
+                font-size: 2.7em;
+                letter-spacing: 2px;
+            }
+            .prix-event{
+                font-size: 2.1em;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 500px){
+    .event{
+        .event-grid{
+            height: 300vh;
+            display: grid;
+            position: relative;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(7, 100vh);
+        }
+    }
+}
