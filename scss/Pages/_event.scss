@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @use '../Utils/mixins' as *;
 @use '../Utils/variables' as *;
 
@@ -49,56 +48,4 @@
             position: relative;
         }
     }
-=======
-@use '../Utils/mixins' as *;
-@use '../Utils/variables' as *;
-
-.event{
-    width: 100%;
-    height: 300vh;
-    .event-grid{
-        height: 300vh;
-        @include display($type:grid,$columngap:50px, $row:repeat(5, 100vh), $column:repeat(3, 1fr));
-        position: relative;
-        .box-event{
-            width: 90%;
-            height: 70%;
-            position: relative;
-            text-align: center;
-            left: 5%;
-            top: 5%;
-            .img-event{
-                width: 100%;
-                height: 80%;
-                object-fit: cover;
-                border-radius: 10px;
-            }
-            .title-event{
-                font-size: 3.7em;
-                letter-spacing: 1px;
-            }
-            .detail-event{
-                font-size: 2em;
-                color: $font-secondary;
-            }
-            .date-event{
-                font-size: 2.7em;
-                letter-spacing: 2px;
-            }
-            .prix-event{
-                font-size: 2.1em;
-                letter-spacing: 1px;
-            }
-        }
-    }
-}
-@include respond-to('medium') {
-    .event{
-        .event-grid{
-            height: 300vh;
-            @include display($type:grid,$columngap:0px, $row:repeat(7, 100vh), $column:repeat(1, 1fr));
-            position: relative;
-        }
-    }
->>>>>>> main
 }
