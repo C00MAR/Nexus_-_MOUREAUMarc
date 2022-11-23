@@ -1,0 +1,168 @@
+@use '../Utils/mixins' as *;
+@use '../Utils/variables' as *;
+
+.one{
+    height: 100vh;
+    width: 100%;
+    background-color: $bg-primary;
+    @include display($type:flex, $direction:column, $align:center);
+    text-align: center;
+    .titlespaccing{
+        @include display($type:flex, $direction:row, $align:center, $justify:space-evenly);
+        margin-top: 25px;
+        @include respond-to('medium') {
+            margin-top: 0px;
+            flex-direction: column;
+        }
+        .title-one{
+            font-size: 15em;
+            margin-top: 25px;
+            letter-spacing: 30px;
+            animation: letterspacing 1.2s ease-in-out alternate infinite;
+            &:nth-child(2){
+                margin-left: 100px;        
+            }
+            @include respond-to('medium') {
+                font-size: 8.5em;
+                margin-top: -5px;
+                &:nth-child(2){
+                    margin-left: 0px;        
+                }
+            }
+            
+            @keyframes letterspacing {
+                to{
+                    letter-spacing: 20px;
+                }
+                from{
+                    letter-spacing: 15px;
+                }
+            }
+        }
+    }
+    .subtitle-one{
+        padding: 15px;
+        background-color: $bg-hover;
+        color: $font-sub;
+        font-size: 6em;
+        width: 90%;
+        letter-spacing: 5px;
+        margin-top: 10px;
+        @include respond-to('medium') {
+            font-size: 3em;
+            padding: 5px;
+        }
+    }
+    .detail-one{
+        letter-spacing: 3px;
+        font-size: 4em;
+        width: 50%;
+        margin-top: 15px;
+        @include respond-to('medium') {
+            font-size: 1.8em;
+            width: 70%;
+        }
+    }
+    .listdetail{
+        font-size: 2.2em;
+        margin-top: 6px;
+        @include respond-to('medium') {
+            font-size: 1.6em;
+            letter-spacing: 3px;
+        }
+    }
+    .finishdetail{
+        font-size: 9em;
+        letter-spacing: 10px;
+        margin-top: 80px;
+        @include respond-to('medium') {
+            font-size: 5em;
+        }
+    }
+}
+
+.two{
+    height: 100vh;
+    width: 100%;
+    margin-top: 150px;
+    .gridphoto{
+        @include display($type:grid,$columngap:20px, $rowgap:20px, $row:repeat(7, 40vh), $column:repeat(5, 1fr));
+        width: 80%;
+        background-color: rgb(0, 0, 0);
+        position: relative;
+        left: 10%;
+        padding-bottom: 5vh;
+        .photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            mix-blend-mode: luminosity;
+        }
+        #un{
+            grid-column: 1 / 3;
+        }
+        #deux{
+            grid-column: 3 / 5;
+            grid-row: 1 / 3;
+        }
+        #neuf{
+            grid-column: 4 / 6;
+            grid-row: 6 / 8;
+        }
+        #douze{
+            grid-row: 5 / 7;
+            grid-column: 2 / 4;
+        }
+        #quinze{
+            grid-column: 4 / 6;
+            grid-row: 4 / 6;
+        }
+        #treize{
+            grid-column: 1 / 3;
+        }
+        #seize{
+            grid-column: 1 / 4;
+            grid-row: 3 / 5;
+        }
+    }
+    @include respond-to('medium') {
+    .gridphoto{
+        @include display($type:grid, $columngap:20px, $rowgap:20px, $row:repeat(12, 40vh), $column:repeat(2, 1fr));
+        width: 90%;
+        left: 5%;
+        padding-bottom: 25vh;
+        #un{
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+        }
+        #deux{
+            grid-row: 1 / 3;
+            grid-column: 1 ;
+        }
+        #cinq{
+            grid-column: 1 / 3;
+        }
+        #neuf{
+            grid-column: 1 / 2;
+            grid-row: 9 / 11;
+        }
+        #douze{
+            grid-column: 2 / 3;
+            grid-row: 9 / 11;
+        }
+        #quinze{
+            grid-column: 1 / 3;
+            grid-row: 12 / 13;
+        }
+        #treize{
+            grid-column: 2 / 3;
+            grid-row: 5 / 6;
+        }
+        #seize{
+            grid-row: 3/5;
+            grid-column: 1/3;
+        }
+        }
+    }
+}

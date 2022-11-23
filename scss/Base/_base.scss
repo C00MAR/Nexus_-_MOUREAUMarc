@@ -1,0 +1,18 @@
+@use '../Utils/mixins' as *;
+@use '../Utils/variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: 'Bebas Neue', cursive;
+    color: $font-primary;
+}
+body{
+    background-color: $bg-primary;
+}
+::-webkit-scrollbar{
+    width: 0px;
+}
