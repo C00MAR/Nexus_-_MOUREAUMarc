@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @use '../Utils/mixins' as *;
 @use '../Utils/variables' as *;
 
@@ -19,4 +20,27 @@
             letter-spacing: 3vw;
         }
     }
+=======
+@use '../Utils/mixins' as *;
+@use '../Utils/variables' as *;
+
+.boxtitle{
+    margin-top: 20vh;
+    position: relative;
+    left: 15%;
+    @include display($type:flex, $justify:center);
+    text-align: center;
+    padding-bottom: 15px;
+    width: 70%;
+    .titlepage{
+        font-size: 15em;
+        letter-spacing: 5vw;
+    }
+    @include respond-to('medium') {
+        .titlepage{
+            font-size: 12em;
+            letter-spacing: 3vw;
+        }
+    }
+>>>>>>> main
 }
